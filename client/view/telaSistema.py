@@ -88,10 +88,13 @@ class Ui_janelaPrincipal(object):
         self.entrada_msg = QtWidgets.QTextEdit(self.centralwidget)
         self.entrada_msg.setGeometry(QtCore.QRect(20, 360, 761, 221))
         font = QtGui.QFont()
-        font.setPointSize(40)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(36)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
         self.entrada_msg.setFont(font)
+        self.entrada_msg.setStyleSheet("font: 75 36pt \"MS Shell Dlg 2\";")
         self.entrada_msg.setObjectName("entrada_msg")
         janelaPrincipal.setCentralWidget(self.centralwidget)
 
@@ -111,6 +114,5 @@ class Ui_janelaPrincipal(object):
         self.entrada_msg.setHtml(_translate("janelaPrincipal", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Cantarell\'; font-size:40pt; font-weight:600; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:15pt; font-weight:400;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:15pt; font-weight:400;\"><br /></p></body></html>"))
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:36pt; font-weight:72; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:40px; font-weight:600;\"><br /></p></body></html>"))
