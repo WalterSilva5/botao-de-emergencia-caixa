@@ -97,6 +97,8 @@ class Ui_janelaPrincipal(object):
         self.entrada_msg.setStyleSheet("font: 75 36pt \"MS Shell Dlg 2\";")
         self.entrada_msg.setObjectName("entrada_msg")
         janelaPrincipal.setCentralWidget(self.centralwidget)
+        self.actionC1 = QtWidgets.QAction(janelaPrincipal)
+        self.actionC1.setObjectName("actionC1")
 
         self.retranslateUi(janelaPrincipal)
         QtCore.QMetaObject.connectSlotsByName(janelaPrincipal)
@@ -104,15 +106,18 @@ class Ui_janelaPrincipal(object):
     def retranslateUi(self, janelaPrincipal):
         _translate = QtCore.QCoreApplication.translate
         janelaPrincipal.setWindowTitle(_translate("janelaPrincipal", "ALERTA FRINEPE CAIXA"))
-        self.bt_1.setText(_translate("janelaPrincipal", "1"))
+        self.bt_1.setText(_translate("janelaPrincipal", "F1"))
         self.label.setText(_translate("janelaPrincipal", "CANCELAR ITEM NA VENDA"))
         self.label_2.setText(_translate("janelaPrincipal", "CANCELAR VENDA COMPLETA"))
-        self.bt_2.setText(_translate("janelaPrincipal", "2"))
+        self.bt_2.setText(_translate("janelaPrincipal", "F2"))
         self.label_3.setText(_translate("janelaPrincipal", "PRECISO DE AJUDA NO CAIXA"))
-        self.bt_3.setText(_translate("janelaPrincipal", "3"))
+        self.bt_3.setText(_translate("janelaPrincipal", "F3"))
         self.label_4.setText(_translate("janelaPrincipal", "MENSAGEM"))
         self.entrada_msg.setHtml(_translate("janelaPrincipal", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:36pt; font-weight:72; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:40px; font-weight:600;\"><br /></p></body></html>"))
+        self.actionC1.setText(_translate("janelaPrincipal", "c1"))
+        self.actionC1.setShortcut(_translate("janelaPrincipal", "F1"))
+        

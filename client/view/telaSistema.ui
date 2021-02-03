@@ -52,7 +52,7 @@
      <string notr="true">background-color: yellow;</string>
     </property>
     <property name="text">
-     <string>1</string>
+     <string>F1</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -116,7 +116,7 @@
 ;</string>
     </property>
     <property name="text">
-     <string>2</string>
+     <string>F2</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -159,7 +159,7 @@
      <string notr="true">background-color: red;</string>
     </property>
     <property name="text">
-     <string>3</string>
+     <string>F3</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -215,6 +215,14 @@ p, li { white-space: pre-wrap; }
     </property>
    </widget>
   </widget>
+  <action name="actionC1">
+   <property name="text">
+    <string>c1</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

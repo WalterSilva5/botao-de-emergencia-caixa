@@ -13,11 +13,12 @@ class ControllerTelaSistema(QMainWindow):
         self.model = model
         self.tela = Ui_MainWindow()
         self.tela.setupUi(self)
-        self.tela.bt_1.clicked.connect(self.clicado_1)
+        self.tela.bt_1.clicked.connect(self.clicado_1)      
         self.tela.bt_2.clicked.connect(self.clicado_2)
+        
         self.tela.bt_3.clicked.connect(self.clicado_3)
         self.caixa = self.busca_dados()
-
+           
     def busca_dados(self):
         arquivo = open("config.txt", 'r')
         dados = arquivo.readlines()
