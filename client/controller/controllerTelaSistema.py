@@ -17,7 +17,6 @@ class ControllerTelaSistema(QMainWindow):
         self.tela.bt_2.clicked.connect(self.clicado_2)
         self.tela.bt_3.clicked.connect(self.clicado_3)
         self.caixa = self.busca_dados()
-        print(self.caixa)
 
     def busca_dados(self):
         arquivo = open("config.txt", 'r')
@@ -35,19 +34,16 @@ class ControllerTelaSistema(QMainWindow):
         self.preparar_mensagem(3)
 
     def preparar_mensagem(self, botao):
-        mensagem = {
-            "botao": botao,
-            "caixa": self.caixa,
-            "obs": self.tela.entrada_msg.toPlainText(),
-        }
+        mensagem = [botao, self.caixa, (self.tela.entrada_msg.toPlainText())]
         self.enviar_mensagem(mensagem)
 
     def enviar_mensagem(self, mensagem):
         try:
             self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.s.connect((socket.gethostbyname("23.1.1.238"), 12397))
-            print("conectado")
             self.s.send(str(mensagem).encode())
             self.tela.entrada_msg.setText("")
+            self.s.close()
         except:
+            self.s.close()
             print("ocorreu um erro")
