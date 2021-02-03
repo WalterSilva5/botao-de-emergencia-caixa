@@ -17,13 +17,14 @@ class ControllerTelaSistema(QMainWindow):
         self.tela.bt_2.clicked.connect(self.clicado_2)
         
         self.tela.bt_3.clicked.connect(self.clicado_3)
-        self.caixa = self.busca_dados()
-           
+        self.caixa, self.servidor = self.busca_dados()
     def busca_dados(self):
         arquivo = open("config.txt", 'r')
-        dados = arquivo.readlines()
+        dados=[]
+        dados.append(arquivo.readline()[0:-1])
+        dados.append(arquivo.readline())
         arquivo.close()
-        return dados[0]
+        return dados
 
     def clicado_1(self):
         self.preparar_mensagem(1)
@@ -41,7 +42,7 @@ class ControllerTelaSistema(QMainWindow):
     def enviar_mensagem(self, mensagem):
         try:
             self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            self.s.connect((socket.gethostbyname("23.1.1.238"), 12397))
+            self.s.connect((socket.gethostbyname(self.servidor), 12397))
             self.s.send(str(mensagem).encode())
             self.tela.entrada_msg.setText("")
             self.s.close()
